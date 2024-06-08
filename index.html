@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orario dei Professori</title>
+<link rel="stylesheet" href="stile.css">
+<style>
+    body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    .highlight {
+        background-color: yellow;
+    }
+    #titolo {
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    #sottotitolo {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orario dei Professori</title>
+    <link rel="stylesheet" href="stile.css">
+    <style>
+        body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    .highlight {
+        background-color: yellow;
+    }
+    #titolo {
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    #sottotitolo {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    </style>
+    <script>
+        
+        function mostraPopupCookie() {
+            var popup = document.getElementById("popup-cookie");
+            popup.style.display = "block";
+        }
+        
+        function chiudiPopupCookie() {
+            var popup = document.getElementById("popup-cookie");
+            popup.style.display = "none";
+        }
+        
+        function rifiutaCookie() {
+        }
+        
+        function accettaCookie() {
+            chiudiPopupCookie();
+        }
+        
+        function raddoppiaEPassaAlProssimo() {
+            window.open("https://www.youtube.com/watch?v=i1um7jIQls8", "_blank");
+            chiudiPopupCookie();
+        }
+    </script>
+</head>
+<body onload="mostraPopupCookie()">
+    <script>
+    function evidenziaRiga() {
+        var select = document.getElementById("selectProfessore");
+        var professoreSelezionato = select.value;
+        var righe = document.getElementsByTagName("tr");
+
+        for (var i = 1; i < righe.length; i++) {
+            righe[i].classList.remove("highlight");
+            if (righe[i].getElementsByTagName("td")[0].textContent === professoreSelezionato) {
+                righe[i].classList.add("highlight");
+            }
+        }
+    }
+</script>
+</head>
+<body>
+
+<h1 id="titolo">Orario dei Professori</h1>
+<h2 id="sottotitolo">Anno Scolastico 2023-2024</h2>
+
+<p style="text-align: center;">Benvenuti alla pagina dell'orario dei professori. Di seguito troverete l'orario settimanale di ciascun professore.</p>
+
+<label for="selectProfessore">Seleziona Professore:</label>
+<select id="selectProfessore" onchange="evidenziaRiga()">
+    <option value="">--Seleziona--</option>
+    <option value="Antenucci A.">Antenucci A.</option>
+    <option value="D'Ercole P.">D'Ercole P.</option>
+    <option value="Di Casoli M.">Di Casoli M.</option>
+    <option value="Fiore E.">Fiore E.</option>
+    <option value="Mercuri M. A.">Mercuri M. A.</option>
+    <option value="Palarie R.">Palarie R.</option>
+    <option value="Perrozzi F.">Perrozzi F.</option>
+    <option value="Scopa M.">Scopa M.</option>
+    <option value="Tiberio I.">Tiberio I.</option>
+    <option value="Zurlo P.">Zurlo P.</option>
+</select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Professore</th>
+            <th>Lunedì</th>
+            <th>Martedì</th>
+            <th>Mercoledì</th>
+            <th>Giovedì</th>
+            <th>Venerdì</th>
+            <th>Sabato</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Antenucci A.</td>
+            <td>3A LS 08:10-09:10<br>2B LS 09:10-10:10<br>1A LS 10:10-11:10<br>1A LS 11:10-12:10</td>
+            <td></td>
+            <td>2B LS 10:10-11:10<br>1A LS 11:10-12:10<br>1A LS 12:10-13:10</td>
+            <td>1A LS 08:10-09:10<br>3A LS 11:10-12:10</td>
+            <td>2B LS 09:10-10:10<br>3A LS 11:10-12:10</td>
+            <td>3A LS 11:10-12:10<br>3A LS 12:10-13:10</td>
+        </tr>
+        <tr>
+            <td>D'Ercole P.</td>
+            <td>1B LS 09:10-10:10<br>2A LS 10:10-11:10</td>
+            <td>3A LS 08:10-09:10<br>2A LS 10:10-11:10</td>
+            <td>1B LS 10:10-11:10<br>3A LS 11:10-12:10</td>
+            <td>1B LS 08:10-09:10</td>
+            <td>2A LS 09:10-10:10</td>
+            <td>2A LS 10:10-11:10</td>
+        </tr>
+        <tr>
+            <td>Di Casoli M.</td>
+            <td></td>
+            <td>4A IT/E 08:10-09:10<br>4A IT/E 09:10-10:10<br>5A IT/E 11:10-12:10<br>5A IT/E 12:10-13:10</td>
+            <td></td>
+            <td>5A IT/E 08:10-09:10</td>
+            <td>4A IT/E 09:10-10:10<br>5A IT/E 10:10-11:10</td>
+            <td>5A IT/E 08:10-09:10</td>
+        </tr>
+        <tr>
+            <td>Fiore E.</td>
+            <td>4A LS 10:10-11:10</td>
+            <td>3A LS 08:10-09:10<br>4A LS 10:10-11:10<br>1A LS 11:10-12:10</td>
+            <td>3A LS 08:10-09:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mercuri M. A.</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2B LS 08:10-09:10<br>2B LS 10:10-11:10</td>
+            <td>1A LS 08:10-09:10<br>4A LS 10:10-11:10</td>
+            <td>2B LS 08:10-09:10</td>
+        </tr>
+        <tr>
+            <td>Palarie R.</td>
+            <td>3A LS 08:10-09:10<br>2B LS 10:10-11:10</td>
+            <td>1A LS 08:10-09:10<br>2B LS 09:10-10:10<br>1A LS 11:10-12:10</td>
+            <td>2B LS 08:10-09:10<br>1A LS 09:10-10:10</td>
+            <td>2B LS 09:10-10:10<br>2B LS 10:10-11:10<br>1A LS 11:10-12:10</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Perrozzi F.</td>
+            <td></td>
+            <td>1B LS 08:10-09:10<br>2B LS 09:10-10:10<br>3A LS 10:10-11:10</td>
+            <td></td>
+            <td>2B LS 08:10-09:10<br>1A LS 09:10-10:10<br>2B LS 12:10-13:10</td>
+            <td>2B LS 08:10-09:10<br>2B LS 10:10-11:10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Scopa M.</td>
+            <td></td>
+            <td>3A LS 09:10-10:10<br>2A LS 10:10-11:10<br>1A LS 11:10-12:10</td>
+            <td>3A LS 09:10-10:10<br>2A LS 11:10-12:10</td>
+            <td>1A LS 09:10-10:10<br>1A LS 10:10-11:10<br>1A LS 12:10-13:10</td>
+            <td>1A LS 10:10-11:10<br>2A LS 11:10-12:10</td>
+            <td>2A LS 09:10-10:10<br>2B LS 11:10-12:10</td>
+        </tr>
+        <tr>
+            <td>Tiberio I.</td>
+            <td>3A LS 09:10-10:10<br>1A LS 11:10-12:10<br>1A LS 12:10-13:10</td>
+            <td>2B LS 08:10-09:10<br>1A LS 09:10-10:10<br>3A LS 10:10-11:10</td>
+            <td>2B LS 09:10-10:10<br>2A LS 10:10-11:10</td>
+            <td></td>
+            <td></td>
+            <td>2A LS 08:10-09:10</td>
+        </tr>
+        <tr>
+            <td>Zurlo P.</td>
+            <td>3A LS 08:10-09:10<br>2B LS 10:10-11:10</td>
+            <td>1A LS 08:10-09:10<br>2B LS 09:10-10:10<br>1A LS 11:10-12:10</td>
+            <td>2B LS 08:10-09:10<br>1A LS 09:10-10:10</td>
+            <td>2B LS 09:10-10:10<br>2B LS 10:10-11:10<br>1A LS 11:10-12:10</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+    <li>Consulta l'orario per ogni giorno della settimana.</li>
+    <li>Seleziona un professore per evidenziare il suo orario.</li>
+    <li>Utilizza il menu a tendina per una navigazione rapida.</li>
+</ul>
+</body>
+</html>
+    <div id="popup-cookie" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f0f8ff; padding: 20px; border: 1px solid black; border-radius: 10px;">
+        <h3 style="text-align: center;">Il Sito ti offre i Biscotti...</h3>
+		<h2 style="text-align: center;">e tu che fai?</h2>
+		<p>(l'immagine che sembra gli sia passato sopra un camion si chiama Ironia)</p>
+		<img src="trade.jpg" alt="Ironia" style="width: 300px; height: 300px; margin: 0 auto; display: block;">
+		<br></br>
+        <button style="background-color: #008000; color: #ffffff;" onclick="accettaCookie()">Accetta</button>
+		<button style="background-color: #ff0000; color: #ffffff;" onclick="rifiutaCookie()">Rifiuta (tanto è rotta e al GDPR non piace...)</button>
+        <button onclick="raddoppiaEPassaAlProssimo()">Raddoppia e passa al prossimo...</button>
+    </div>
+</body>
+</html>
